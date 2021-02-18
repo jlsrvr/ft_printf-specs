@@ -4,6 +4,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <string.h>
+# include "libftprintf.h"
 
 # define RED	"\e[31m"
 # define GREEN	"\e[32m"
