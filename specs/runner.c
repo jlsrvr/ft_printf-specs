@@ -1,5 +1,6 @@
 //#include "libftprintf.a"
 #include "spec.h"
+#include <stdarg.h>
 
 int main(int ac, char **av)
 {
@@ -7,8 +8,8 @@ int main(int ac, char **av)
 	(void)av;
 
 	char *str = "Jean Bob";
-	int dec = -7;
-	// int	oct = 0172; //octal equivalent of decimal 10
+	int dec = 123;
+	//int	oct = 0172; //octal equivalent of decimal 10
     /*int a, b, c;
 
     printf("Enter value of a in decimal format:");
@@ -21,10 +22,9 @@ int main(int ac, char **av)
     scanf("%i", &c);
 
     printf("a = %d, b = %d, c = %d", a, b, c);*/
-
-	//printf("[%10s]", str);
-	//printf("[%*s]", 10, str);
-	printf("[%5d]", dec);
+	printf("[%c]", -25);
+	//printf("[%.*s]", -3, str);
+	//printf("[%5d]", dec);
 	//printf("[%x]", dec);
 	//printf("[%0-10s]", str);
 	/*void (*parts[5])(char **argv);
