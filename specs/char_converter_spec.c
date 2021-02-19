@@ -6,14 +6,7 @@ static void char_converter_test(char *describe, t_specs my_specs, char c, char *
 
 	printf("<==== %s ====>\n", describe);
 	result = char_converter(my_specs, c);
-	if (strcmp(result, expected))
-	{
-		printf(RED "KO\n" RESET);
-		printf("Excpected = [%s]\n", expected);
-		printf("Got       = [%s]\n", result);
-		return ;
-	}
-	printf(GREEN "OK\n" RESET);
+	check_spec_result(result, expected);
 	free(result);
 	return ;
 }
@@ -35,17 +28,6 @@ static void char_converter_test(char *describe, t_specs my_specs, char c, char *
 	free(result);
 	return ;
 }*/
-
-static t_specs test_specs(int zero_pad, int right_pad, int min_f_width, int precision)
-{
-	t_specs specs;
-
-	specs.zero_pad = zero_pad;
-	specs.right_pad = right_pad;
-	specs.min_f_width = min_f_width;
-	specs.precision = precision;
-	return (specs);
-}
 
 int main(void)
 {
