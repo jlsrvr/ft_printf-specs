@@ -11,7 +11,7 @@ t_specs test_specs(int zero_pad, int right_pad, int min_f_width, int precision)
 	return (specs);
 }
 
-void	check_spec_result(char *result, char * expected)
+void	check_conversion_result(char *result, char * expected)
 {
 	if (strcmp(result, expected))
 	{

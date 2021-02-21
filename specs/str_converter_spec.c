@@ -6,7 +6,7 @@ static void str_converter_test(char *describe, t_specs my_specs, char *str, char
 
 	printf("<==== %s ====>\n", describe);
 	result = str_converter(my_specs, str);
-	check_spec_result(result, expected);
+	check_conversion_result(result, expected);
 	free(result);
 	return ;
 }
