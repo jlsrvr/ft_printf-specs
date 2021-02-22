@@ -17,6 +17,6 @@
 # define BLINK	"\e[5m"
 # define RESET  "\e[0m"
 
-t_specs test_specs(int zero_pad, int right_pad, int min_f_width, int precision, char format);
+t_specs test_specs(int valid, int zero_pad, int right_pad, int min_f_width, int precision, char format);
 void    check_conversion_result(char *result, char * expected);
 #endif
