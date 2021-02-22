@@ -1,38 +1,39 @@
 #include "spec.h"
 
-static void	check_result(char *result, char *expected)
+static void	check_result(char *result, char *expected, int result_int, int expected_int)
 {
-	if (strcmp(result, expected))
+	if (strcmp(result, expected) || result_int != expected_int)
 	{
 		printf(RED "KO\n" RESET);
-		printf("Excpected = [%s]\n", expected);
-		printf("Got       = [%s]\n", result);
+		printf("Expected |%d| = [%s]\n", expected_int, expected);
+		printf("Got      |%d| = [%s]\n", result_int, result);
 		return ;
 	}
 	printf(GREEN "OK\n" RESET);
 }
 
-static void converting_function_test(char *describe, char **dest, int valid, char format, char *expected, ...)
+static void converting_function_test(char *describe, char **dest, int valid, char format, int expected_int, char *expected, ...)
 {
 	t_specs specs;
 	va_list args;
+	int result;
 
 	va_start(args, expected);
 	specs = test_specs(valid, 0, 0, 0, -1, format);
 	printf("<==== %s ====>\n", describe);
-	converting_function(specs, args, dest);
-	check_result(*dest, expected);
+	result = converting_function(specs, &args, dest);
+	check_result(*dest, expected, result, expected_int);
 	free(*dest);
 	return ;
 }
 
 int main(void)
 {
-	printf("\\\\\\ Specs string_writer function  ///\n");
+	printf("\\\\\\ Specs converting_function function  ///\n");
 	char *dest;
 
 	dest = ft_strdup("");
-	string_writer_test("Valid s", &dest, 1, 's', "added", "added");
+	converting_function_test("Valid s", &dest, 1, 's', 1, "added", "added");
 
 	return (1);
 }
