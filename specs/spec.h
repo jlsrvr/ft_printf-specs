@@ -3,6 +3,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdarg.h>
 # include <fcntl.h>
 # include <string.h>
 # include "libftprintf.h"
@@ -16,6 +17,6 @@
 # define BLINK	"\e[5m"
 # define RESET  "\e[0m"
 
-t_specs test_specs(int zero_pad, int right_pad, int min_f_width, int precision);
+t_specs test_specs(int zero_pad, int right_pad, int min_f_width, int precision, char format);
 void    check_conversion_result(char *result, char * expected);
 #endif
