@@ -16,7 +16,7 @@ void	check_conversion_result(char *result, char * expected)
 	if (strcmp(result, expected))
 	{
 		printf(RED "KO\n" RESET);
-		printf("Excpected = [%s]\n", expected);
+		printf("Expected = [%s]\n", expected);
 		printf("Got       = [%s]\n", result);
 		return ;
 	}
