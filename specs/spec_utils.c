@@ -13,13 +13,13 @@ t_specs test_specs(int valid, int zero_pad, int right_pad, int min_f_width, int 
 	return (specs);
 }
 
-void	check_conversion_result(char *result, char * expected)
+void	check_conversion_result(char *result, char *expected)
 {
 	if (strcmp(result, expected))
 	{
 		printf(RED "KO\n" RESET);
 		printf("Expected = [%s]\n", expected);
-		printf("Got       = [%s]\n", result);
+		printf("Got      = [%s]\n", result);
 		return ;
 	}
 	printf(GREEN "OK\n" RESET);
