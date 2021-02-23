@@ -37,8 +37,24 @@ int main(void)
 	converting_function_test("Invalid struct", &dest, 0, 0, 0, "", "added");
 	dest = ft_strdup("start ");
 	converting_function_test("Valid with simple s", &dest, 1, 's', 1, "start added", "added");
-	//dest = ft_strdup("start ");
-	//converting_function_test("Valid with simple c", &dest, 1, 'c', 1, "start +", '+');
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple c", &dest, 1, 'c', 1, "start +", '+');
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple %", &dest, 1, '%', 1, "start %", "ne doit pas etre vu");
+	dest = ft_strdup("start ");
+	/*converting_function_test("Valid with simple d", &dest, 1, 'd', 1, "start 42", 42);
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple i", &dest, 1, 'i', 1, "start 42", 42);
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple u", &dest, 1, 'u', 1, "start 4294967254", -42);
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple x", &dest, 1, 'x', 1, "start 2a", 42);
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple x", &dest, 1, 'x', 1, "start ffffffd6", -42);
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple X", &dest, 1, 'X', 1, "start 2A", 42);
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple p", &dest, 1, 'p', 1, "start 0x0", NULL);*/
 
 	return (1);
 }
