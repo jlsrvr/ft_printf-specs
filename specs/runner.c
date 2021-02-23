@@ -22,7 +22,7 @@ int main(int ac, char **av)
     scanf("%i", &c);
 
     printf("a = %d, b = %d, c = %d", a, b, c);*/
-	dec = printf("[%010s]", str);
+	dec = printf("[%5.0p]", str);
 	printf("%d", dec);
 	//printf("[%.*s]", -3, str);
 	//printf("[%5d]", dec);
