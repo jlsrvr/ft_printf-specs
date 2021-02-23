@@ -24,6 +24,7 @@ static void converting_function_test(char *describe, char **dest, int valid, cha
 	result = converting_function(specs, &args, dest);
 	check_result(*dest, expected, result, expected_int);
 	free(*dest);
+	va_end(args);
 	return ;
 }
 
@@ -33,7 +34,11 @@ int main(void)
 	char *dest;
 
 	dest = ft_strdup("");
-	converting_function_test("Valid s", &dest, 1, 's', 1, "added", "added");
+	converting_function_test("Invalid struct", &dest, 0, 0, 0, "", "added");
+	dest = ft_strdup("start ");
+	converting_function_test("Valid with simple s", &dest, 1, 's', 1, "start added", "added");
+	//dest = ft_strdup("start ");
+	//converting_function_test("Valid with simple c", &dest, 1, 'c', 1, "start +", '+');
 
 	return (1);
 }
