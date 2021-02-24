@@ -8,7 +8,7 @@ int main(int ac, char **av)
 	(void)av;
 
 	char *str = "string";
-	int dec = 123;
+	int dec = -53;
 	//int	oct = 0172; //octal equivalent of decimal 10
     /*int a, b, c;
 
@@ -22,7 +22,10 @@ int main(int ac, char **av)
     scanf("%i", &c);
 
     printf("a = %d, b = %d, c = %d", a, b, c);*/
-	dec = printf("[%5.0p]", str);
+	dec = printf("[%-0-025.6d]", dec);
+	/*printf("[%012.5d]\n", dec);
+	printf("[%-12.5d]\n", dec);
+	dec = printf("[%05d]\n", dec);*/
 	printf("%d", dec);
 	//printf("[%.*s]", -3, str);
 	//printf("[%5d]", dec);
