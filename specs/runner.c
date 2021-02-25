@@ -22,7 +22,7 @@ int main(int ac, char **av)
     scanf("%i", &c);
 
     printf("a = %d, b = %d, c = %d", a, b, c);*/
-	dec = printf("[%-0-025.6d]", dec);
+	dec = printf("[%025x]", dec);
 	/*printf("[%012.5d]\n", dec);
 	printf("[%-12.5d]\n", dec);
 	dec = printf("[%05d]\n", dec);*/
