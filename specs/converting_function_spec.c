@@ -42,9 +42,7 @@ int main(void)
 	dest = ft_strdup("start ");
 	converting_function_test("Valid with simple %", &dest, 1, '%', 1, "start %", "ne doit pas etre vu");
 	dest = ft_strdup("start ");
-	dest = ft_strdup("start ");
-	converting_function_test("Valid with simple p", &dest, 1, 'p', 1, "start 0x0", NULL);
-	/*converting_function_test("Valid with simple d", &dest, 1, 'd', 1, "start 42", 42);
+	converting_function_test("Valid with simple d", &dest, 1, 'd', 1, "start 42", 42);
 	dest = ft_strdup("start ");
 	converting_function_test("Valid with simple i", &dest, 1, 'i', 1, "start 42", 42);
 	dest = ft_strdup("start ");
@@ -56,7 +54,7 @@ int main(void)
 	dest = ft_strdup("start ");
 	converting_function_test("Valid with simple X", &dest, 1, 'X', 1, "start 2A", 42);
 	dest = ft_strdup("start ");
-	converting_function_test("Valid with simple p", &dest, 1, 'p', 1, "start 0x0", NULL);*/
+	converting_function_test("Valid with simple p", &dest, 1, 'p', 1, "start 0x0", NULL);
 
 	return (1);
 }
