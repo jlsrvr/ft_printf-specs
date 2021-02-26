@@ -20,7 +20,7 @@ int main(void)
 	printf("\\\\\\ Specs str converter ///\n");
 	str_converter_test("No specs", test_specs(1, 0, 0, 0, -1, 's'), "Toto", "Toto");
 	str_converter_test("No specs and NULL", test_specs(1, 0, 0, 0, -1, 's'), NULL, "(null)");
-	str_converter_test("min-field-width and NULL", test_specs(1, 0, 0, 5, -1, 's'), NULL, "(null)");
+	str_converter_test("Min-field-width and NULL", test_specs(1, 0, 0, 10, -1, 's'), NULL, "    (null)");
 	str_converter_test("Only min-field-width 5", test_specs(1, 0, 0, 5, -1, 's'), "to", "   to");
 	str_converter_test("Right-padded, min-field-width 5", test_specs(1, 0, 1, 5, -1, 's'), "to", "to   ");
 	str_converter_test("Right & zero padded, min-field-width 5", test_specs(1, 1, 1, 5, -1, 's'), "to", "to   ");
