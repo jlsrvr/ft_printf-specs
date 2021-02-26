@@ -44,6 +44,9 @@ int main(void)
 	ptn_converter_test("Right and zero padded, min-field-width 20", test_specs(1, 1, 1, 20, -1, 'p'), ptn, expected);
 	expected = "0x2910ee0";
 	ptn_converter_test("Right and zero padded, min-field-width 0", test_specs(1, 1, 1, 0, -1, 'p'), ptn, expected);
+	ptn = 1234;
+	expected = "0x0000004d2";
+	ptn_converter_test("min-field-width 2, precision 9", test_specs(1, 0, 0, 2, 9, 'p'), ptn, expected);
 	ptn = 0;
 	expected = "0x0";
 	ptn_converter_test("No specs ptn = 0", test_specs(1, 0, 0, 0, -1, 'p'), ptn, expected);
@@ -55,6 +58,8 @@ int main(void)
 	ptn_converter_test("Zero-padded, right-padded, min-f-width 5, ptn = 0", test_specs(1, 1, 1, 5, -1, 'p'), ptn, expected);
 	expected = "  0x0";
 	ptn_converter_test("Precision 1, min-f-width 5, ptn = 0", test_specs(1, 0, 0, 5, 1, 'p'), ptn, expected);
+	expected = "0x00000";
+	ptn_converter_test("Precision 5, ptn = 0", test_specs(1, 0, 0, 0, 5, 'p'), ptn, expected);
 	expected = "   0x";
 	ptn_converter_test("Precision 0, min-f-width 5, ptn = 0", test_specs(1, 0, 0, 5, 0, 'p'), ptn, expected);
 
