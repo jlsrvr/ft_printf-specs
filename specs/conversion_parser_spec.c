@@ -45,13 +45,12 @@ static void conversion_parser_test(char *describe, t_specs expected, char **stri
 	printf("<==== %s ====>\n", describe);
 	result = conversion_parser(string, &arguments);
 	check_result(result, expected);
-	//may need to malloc t_spec that is returned and hence free it after
 	return ;
 }
 
 int main(void)
 {
-	printf("\\\\\\ Specs string_writer function  ///\n");
+	printf("\\\\\\ Specs conversion_parser function  ///\n");
 	int index;
 	char *conversion;
 	char *formats[9] = {"c", "s", "p", "d", "i", "u", "x", "X", "%"};
